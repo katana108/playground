@@ -1,34 +1,56 @@
 # Sofico Current Vs Future
 
-This file separates what is already real from what is still aspirational.
+This file separates what is already real from what is only planned.
 
-## Already Built Or Strongly Grounded
+## Already Real In The Source Project
 
-- teacher bootstrap stack in the real repo
-- student model and learner-memory revision in the real repo
-- artifact store and context-view logic in the real repo
-- reflection engine for learner updates in the real repo
-- local harness and onboarding flow in the real repo
-- `SELF_MODEL.md` and `DREAMING.md` as real documents in the real repo
+### Runtime Pieces
 
-## Strong Candidate Features To Port / Adapt
+- orchestrator direction
+- teacher bootstrap stack
+- learner model persistence
+- learner-memory revision
+- artifact store and context view
+- reflection engine for learner updates
+- local harness and onboarding flow
 
-- bootstrap identity files
-- student-model persistence
-- reflection update flow
-- artifact-aware tutoring context
+### Documented Layers
 
-## Not Yet Complete But Important
+- `SELF_MODEL.md`
+- `DREAMING.md`
 
-- runtime use of `SELF_MODEL.md`
-- runtime use of `DREAMING.md`
-- explicit self-model update mechanism for Sofico herself
-- stronger introspection logs
-- mirror-test-like experiment handling
-- roundtable-specific theory-of-mind-like handling
+These are real source files, not imagined features, but they are still documents rather than active runtime mechanisms.
 
-## Strategic Rule
+## Adaptable For This Study
 
-Do not pretend the future state already exists.
+Most reusable pieces:
 
-For this experiment, it is better to implement a small real version than describe a large imaginary one.
+- bootstrap identity text
+- learner-model schema
+- reflection update semantics
+- artifact-aware context handling
+- the distinction between `SOUL`, `SELF_MODEL`, and `DREAMING`
+
+## Not Yet Runtime-Real
+
+- automatic self-model updates for Sofico herself
+- automatic dreaming passes
+- automatic linkage between dreaming output and later behavior
+- roundtable-specific theory-of-mind-like logs
+- mirror-test-like recognition handling
+
+## Minimum Honest Claim
+
+The strongest honest claim about Sofico right now is:
+
+- she already has real learner-model reflection and real bootstrap structure
+- she already has drafted self-model and dreaming documents
+- she does not yet have a full runtime self-and-dreaming loop
+
+## Recommended Build Order For Sofico In This Study
+
+1. preserve the real learner-reflection mechanism
+2. add a small self-reflection pass
+3. add a small dreaming pass
+4. log the outputs cleanly
+5. compare early and late traces

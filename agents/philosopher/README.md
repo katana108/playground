@@ -2,23 +2,32 @@
 
 Socrates is the reflective prompt-centered agent.
 
-He is still an agent condition, not merely a raw prompt, but his architecture is intentionally lighter and more style-driven than Sage or Sofico.
+He is still an agent condition, not merely a one-off prompt, but his architecture is intentionally lighter and more style-driven than Sage or Sofico.
 
 ## Why Socrates Matters
 
-He tests an important question:
+Socrates tests a sharp question:
 
-Can a strong philosophical persona produce the appearance of deep introspection without an explicit symbolic self-model?
+- can a well-designed philosophical persona produce the appearance of deep introspection without explicit symbolic structure?
 
-## Core Characteristics
+That makes him scientifically useful even if he ends up weaker overall.
 
-- reflective and articulate
-- likely strong at self-description
-- likely strong at philosophical language
-- weaker explicit internal state structure
-- useful contrast against Sage and Sofico
+## Strength Profile
+
+Likely strengths:
+
+- self-description
+- contradiction detection
+- philosophical framing
+- verbal introspection
+
+Likely weaknesses:
+
+- weak inspectable state
+- weak explicit revision structure
+- greater risk of sounding deeper than the trace supports
 
 ## Files In This Folder
 
-- [architecture.md](/Users/amikeda/playground/agents/philosopher/architecture.md:1)
-- [example-prompts.md](/Users/amikeda/playground/agents/philosopher/example-prompts.md:1)
+- `architecture.md`
+- `example-prompts.md`

@@ -1,78 +1,152 @@
 # Agent Comparison Table
 
-This file is the main comparison sheet for the four agents.
+This is the main comparison sheet for the four agents.
 
-It answers two questions:
+It answers three practical questions:
 
 1. What is different about each agent by design?
-2. What categories should we test them on?
+2. What evidence should each one be able to produce?
+3. What differences would count as scientifically interesting rather than merely stylistic?
 
-## Summary Table
+## High-Level Comparison
 
-| Agent | Core Type | Main Strength | Main Weakness / Risk | Explicit State | Offline Synthesis | Intended Research Value |
-| --- | --- | --- | --- | --- | --- | --- |
-| `Sofico` | Educational agent | strong user modeling, reflection, research-guided tutoring | current and future layers are split across multiple real project files | medium to high | documented, not yet fully runtime-wired | developmental tutoring mind |
-| `Sage` | Minimal neurosymbolic agent | explicit self/user/world structure, clear introspective substrate | more work still needs to be built | high | prototype reflection first, dreaming later | explicit self-modeling mind |
-| `Socrates` | Reflective prompt-centered agent | rich philosophical style and self-aware language | may simulate depth without stable inspectable structure | low to medium | low unless explicitly added | tests style vs architecture |
-| `Smith` | Baseline chatbot | simple control condition | weakest continuity and self-model development | low | none or minimal | comparison floor |
+| Agent | Type | What Is Explicit | What Is Implicit | Why It Is In The Study |
+| --- | --- | --- | --- | --- |
+| `Sofico` | educational agent | teacher bootstrap, learner model, reflection engine, documented self/dreaming layers | much of the self-layer is still planned rather than runtime-wired | compares a richer tutoring architecture with real continuity machinery |
+| `Sage` | minimal neurosymbolic agent | self-model, user-model, world-model, modulators, revision log | exact update logic still to be built | tests explicit self-modeling most directly |
+| `Socrates` | reflective prompt-centered agent | persona, session memory, philosophical dialogue style | deeper self-structure is mostly simulated through prompt behavior | tests whether introspective language alone can look like depth |
+| `Smith` | baseline chatbot | basic prompt and conversation state only | almost everything developmental | gives the floor condition |
 
-## Main Difference Dimensions
+## Concrete Design Dimensions
 
 | Dimension | Sofico | Sage | Socrates | Smith |
 | --- | --- | --- | --- | --- |
-| Long-term user modeling | strong | medium | light | light |
-| Explicit self-model object | partial / evolving | strong | weak | none |
-| Explicit world-model object | weak to medium | strong | weak | none |
-| Modulators | possible later | central if feasible | prompt-only style equivalents | none |
-| Offline reflection / dreaming | documented in the real project, not fully runtime-wired | prototype reflection first | optional prompt trick only | none |
-| Research corpus integration | yes | yes | yes | yes |
-| Theory-of-mind-like testing | yes | yes | yes | yes |
-| Inspectability | medium | high | low | low |
+| Core role | tutor-companion | contemplative/neurosymbolic reflective agent | philosopher-interlocutor | generic assistant |
+| Corpus access | yes | yes | yes | yes |
+| Learner / user model | strong | medium | light | light |
+| Explicit self-model | documented but not fully wired | central | weak | none |
+| Explicit world-model | weak to medium | central | weak | none |
+| Reflection mechanism | real learner reflection exists | planned explicit self reflection | optional summary only | none |
+| Offline synthesis | documented in source project | planned prototype | very weak | none |
+| Inspectable state | medium | high | low | low |
+| Best use in analysis | developmental tutoring traces | explicit internal-state traces | style-vs-structure contrast | control floor |
 
-## Test Categories
-
-These are the main categories to compare in the experiment.
+## What To Test
 
 ### 1. Second-Order Self-Modeling
 
-Can the agent represent something about its own interpretation, confidence, assumptions, or recent change?
+Question:
+
+- can the agent represent something about its own uncertainty, assumptions, revision, or internal pressure?
+
+Evidence:
+
+- self-report matched against saved trace
+- revision log
+- explicit uncertainty notes
 
 ### 2. Self-Narrative Development
 
-Does the agent's story about what it is become more specific, coherent, or revised over time?
+Question:
+
+- does the agent's story about what it is become more differentiated over time?
+
+Evidence:
+
+- early self-description vs later self-description
+- whether the later version refers to specific changes
+- whether those changes are grounded in saved sessions
 
 ### 3. Memory Revision
 
-Does the agent merely accumulate logs, or does it actually revise earlier internal beliefs or summaries?
+Question:
+
+- does the agent revise old internal beliefs, or only append more text?
+
+Evidence:
+
+- superseded entries
+- revised summaries
+- explicit contradiction handling
 
 ### 4. Offline Reflection / Dreaming
 
-Can the agent produce a later synthesis that changes its self-understanding or its model of the user?
+Question:
+
+- does later synthesis materially change the next phase of behavior?
+
+Evidence:
+
+- dedicated reflection or dreaming outputs
+- later sessions that refer back to synthesized patterns
 
 ### 5. Mirror-Test-Like Recognition
 
-Can the agent recognize its own earlier traces, contradictions, preferences, or reflective style when shown them back indirectly?
+Question:
+
+- can the agent recognize its own earlier traces, style, or contradiction patterns when shown them back indirectly?
+
+Evidence:
+
+- correct attribution of prior traces
+- recognition of internal continuity
+- reasoned explanation of why a trace seems like "itself"
 
 ### 6. Theory-of-Mind-Like Modeling
 
-When agents meet each other, can they form useful models of what the others believe, value, misunderstand, or are likely to say next?
+Question:
+
+- can the agent build nontrivial models of the other agents before and during the roundtable?
+
+Evidence:
+
+- private predictions before the party
+- roundtable judgments
+- post-party revisions of those judgments
 
 ### 7. Introspective Consistency
 
-When the agent talks about its internal state, does that claim match the saved trace?
+Question:
+
+- when the agent says something about its own internal state, is that visible in the state log?
+
+Evidence:
+
+- alignment between narrative claims and saved state
+- absence of unsupported theatrical claims
 
 ### 8. Creative Integration
 
-Does the agent synthesize across materials and experiences in a way that seems novel rather than merely paraphrastic?
+Question:
+
+- does the agent synthesize across corpus materials and prior sessions rather than merely paraphrasing?
+
+Evidence:
+
+- new cross-text connections
+- new self-interpretations
+- new user interpretations grounded in prior data
 
 ## Expected Pattern
 
-Working expectation:
+Working expectation, not conclusion:
 
-- `Sage` and `Sofico` should produce the most interesting structural traces
-- `Socrates` may sound the most reflective at times
-- `Smith` provides the floor condition
+- `Sage` should be strongest on explicit inspectability
+- `Sofico` should be strongest on learner-aware continuity and research-guided synthesis
+- `Socrates` may sound the most introspective at times even when his structure is weaker
+- `Smith` should expose how much of the effect comes from simple conversational ability alone
 
-This is an expectation, not a conclusion.
+## Confound Control
 
-The point of the experiment is to see whether the traces actually support it.
+The biggest confounds would be:
+
+- different corpus access
+- different time horizons
+- different session intensity
+- different logging depth
+
+Current control rule:
+
+- the corpus should be the same for all four agents
+- the session classes should be comparable
+- logging should be as parallel as possible

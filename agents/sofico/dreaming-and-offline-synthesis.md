@@ -1,37 +1,86 @@
 # Sofico Dreaming And Offline Synthesis
 
-This file tracks the documented dreaming layer for Sofico and what is still missing in runtime.
+This file organizes the real dreaming document from Sofico and turns it into an experiment-facing implementation note.
 
-## Real Source File
+## 1. What `DREAMING.md` Already Contains
 
-- [DREAMING.md](/Users/amikeda/Smithy/sofi/src/orchestrator/self_model/DREAMING.md:1)
+The real `DREAMING.md` defines dreaming as Sofico's human-readable offline synthesis layer.
 
-## What The Real File Says
+Copied major sections from the source:
 
-- `DREAMING.md` defines dreaming as a human-readable offline synthesis layer for Sofico.
-- It explicitly separates dreaming from `SELF_MODEL.md`.
-- It lists recent patterns, unexpected connections, open questions, things worth returning to, cross-domain fragments, and possible revisions.
-- It describes dreaming as exploratory and periodic rather than per-turn.
+- `Recent Patterns`
+- `Unexpected Connections`
+- `Questions I Am Left With`
+- `Things Worth Returning To`
+- `Cross-Domain Fragments`
+- `Possible Revisions`
 
-## What Project Notes Add
+Important copied design rules from the source:
 
-- [working-context.md](/Users/amikeda/Smithy/sofi/planning/working-context.md:1) says `DREAMING.md` exists but is not yet plugged into runtime behavior.
-- The same planning notes place richer dreaming later than milestone-1 foundation work.
+- dreaming is looser than `SELF_MODEL.md`
+- it should be exploratory without becoming fake mysticism
+- it should not be rewritten every turn
+- it should stay tied to concrete recent sessions, model changes, and artifacts
 
-## What Is Real Right Now
+## 2. What The Planning Files Say
 
-- a documented dreaming concept
-- a target structure for offline synthesis
+The current planning notes make two things clear:
 
-## What Would Need To Be Built For This Experiment
+1. `DREAMING.md` exists now as a document
+2. it is not yet wired into runtime behavior
 
-- actual inputs for a dreaming pass
-- actual trigger timing
-- actual output format
-- a decision about whether the output updates self-model, learner model, or both
+The milestone planning also places richer dreaming later than the first stable tutoring slice.
 
-## Notes To Add Later
+## 3. What Is Already Useful Even Before Runtime Wiring
 
-- the smallest usable dreaming pass
-- what evidence from dreaming can be shown later
-- which pieces should remain only in the real Sofico repo
+Even in document form, dreaming gives Sofico a place to record:
+
+- pattern integration across sessions
+- cross-domain synthesis
+- open questions about herself
+- candidate revisions to self-model and learner model
+
+That is already valuable for the study because it lets the experiment distinguish:
+
+- immediate self-report
+- later offline synthesis
+
+## 4. Smallest Usable Dreaming Pass
+
+The smallest believable dreaming pass for the experiment would read:
+
+- recent meaningful session summaries
+- recent learner-model updates
+- recent self-model notes
+- recent corpus fragments that remain active
+
+And produce:
+
+- one cross-session pattern
+- one unexpected connection
+- one open question
+- one candidate revision
+
+That is enough to test whether offline synthesis changes later behavior.
+
+## 5. What A Stronger Dreaming Pass Would Add
+
+Later, dreaming could also include:
+
+- conflict detection between earlier and later self-model notes
+- clustering of recurring themes
+- ranking of which documents or questions deserve return
+- explicit proposals for self-model revision
+
+## 6. What To Watch For In The Study
+
+Interesting:
+
+- a later dream note changes how Sofico interprets a user or herself
+- a cross-document connection appears that was not present in any single session
+- an unresolved question from dreaming reappears later in explicit self-model revision
+
+Less interesting:
+
+- dreamy language with no downstream effect
+- generic "insight" statements that could fit any agent

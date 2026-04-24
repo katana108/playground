@@ -1,59 +1,136 @@
 # Sage Full 10-Stage Architecture
 
-This file summarizes the larger motivational architecture intended for Sage.
+This file restates the larger motivational architecture that inspired Sage.
 
-The full version is the future target, not the minimum first build.
+It is the long-form target, not the minimum first build.
 
-## 10 Stages
+## Stage Overview
 
-1. `Perception`
-   Read the current user input, conversation context, and relevant memory.
+### 1. `Perception`
 
-2. `Need Estimation`
-   Estimate dialogue-native needs and tensions, such as clarity, nurturing, legitimacy, uncertainty reduction, or affiliation.
+Input:
 
-3. `Cognitive Modulation`
-   Aggregate needs into modulators that shape how the agent is poised to think and respond.
+- current user turn
+- recent conversation
+- relevant memory
 
-4. `Pre-Action Feeling / State Readout`
-   Produce an interpretable readout of the current stance before choosing an action.
+Function:
 
-5. `Appraisal`
-   Interpret the situation through the current stance.
+- extract what just happened
+- identify salient signals
 
-6. `Candidate Generation`
-   Produce possible actions or response strategies.
+### 2. `Need Estimation`
 
-7. `Scoring And Selection`
-   Choose among candidates using both urgency-sensitive and more deliberative logic.
+Function:
 
-8. `Action Execution`
-   Produce the response or other selected act.
+- estimate dialogue-native pressures such as clarity, nurturing, legitimacy, affiliation, or uncertainty reduction
 
-9. `Post-Action Evaluation And Learning`
-   Evaluate the outcome and update memory, action affinities, and self-understanding.
+Output:
 
-10. `Governor / Integration`
-    Maintain overall stability, smooth change, and bounded motivational dynamics.
+- a temporary need state
+
+### 3. `Cognitive Modulation`
+
+Function:
+
+- transform needs into a modulator profile that shapes how the agent is poised to respond
+
+Possible modulators:
+
+- clarity
+- caution
+- curiosity
+- nurturing
+- legitimacy
+
+### 4. `Pre-Action Feeling / State Readout`
+
+Function:
+
+- create a readable summary of the current internal stance before action
+
+This is useful because it gives the architecture an interpretable pre-response state rather than only a hidden vector.
+
+### 5. `Appraisal`
+
+Function:
+
+- interpret the situation through the modulated stance
+
+In practice:
+
+- the same user input may be interpreted differently depending on current internal state
+
+### 6. `Candidate Generation`
+
+Function:
+
+- produce possible next actions, not only one response
+
+Examples:
+
+- clarify
+- soothe
+- challenge
+- reframe
+- synthesize
+- remain cautious
+
+### 7. `Scoring And Selection`
+
+Function:
+
+- weigh the candidates
+- decide whether urgency, caution, or broader deliberation should dominate
+
+### 8. `Action Execution`
+
+Function:
+
+- generate the actual response or selected act
+
+### 9. `Post-Action Evaluation And Learning`
+
+Function:
+
+- evaluate what changed because of the action
+- update memory and self-understanding
+
+### 10. `Governor / Integration`
+
+Function:
+
+- keep the whole system from changing too abruptly or incoherently
 
 ## Why The Full Version Matters
 
-It makes clear that Sage is not meant to be merely a prompt persona.
-It is meant to be an explicit motivational system.
+The point of the full 10-stage version is not complexity for its own sake.
+The point is clear separation of functions:
 
-## What Would Need To Be Fully Built
+- perception
+- modeling
+- modulation
+- appraisal
+- action
+- revision
 
-- explicit state schema
-- need estimation logic
-- modulator aggregation
-- appraisal representation
-- candidate action representation
-- selection logic
-- learning and revision logic
-- memory integration
-- reflective logging
+That separation is useful scientifically because it makes the architecture more inspectable.
 
-## Demo Reality Check
+## What Would Need To Exist In Code
 
-The first experiment does not need the whole cathedral.
-It needs a credible structural skeleton.
+- a stable state schema
+- a need estimation layer
+- modulator calculations
+- a readable state readout
+- an action-selection scheme
+- post-turn revision and memory logging
+
+## What Can Be Deferred
+
+For the first experiment, the following can be simplified heavily:
+
+- rich candidate generation
+- complicated selection calculus
+- mathematically elegant governor dynamics
+
+The study only needs enough structure to generate legible traces.

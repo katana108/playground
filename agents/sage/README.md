@@ -1,27 +1,38 @@
 # Sage
 
-Sage is the neurosymbolic condition in the playground.
+Sage is the minimal neurosymbolic condition in the study.
 
-Its role is to provide the clearest explicit self-modeling architecture in the comparison.
+If Sofico is the most grounded in an existing educational system, Sage is the cleanest place to make explicit internal structure.
 
 ## Why Sage Matters
 
-- explicit self-model
-- explicit user-model
-- explicit world-model
-- explicit state updates
-- modulators if feasible
-- clean substrate for introspection and self-revision
+Sage is where the study can most directly ask:
 
-## Folder Structure
+- what happens when self-model, user-model, and world-model are explicit objects?
+- what happens when modulators are visible rather than hidden inside prompt style?
+- what happens when revision is logged directly rather than inferred from dialogue?
 
-- [full-10-stage-architecture.md](/Users/amikeda/playground/agents/sage/full-10-stage-architecture.md:1)
-- [prototype-5-stage.md](/Users/amikeda/playground/agents/sage/prototype-5-stage.md:1)
-- [build-plan.md](/Users/amikeda/playground/agents/sage/build-plan.md:1)
+## Three Documents In This Folder
+
+`full-10-stage-architecture.md`
+
+- the larger motivational target
+- useful for the long-term design
+
+`prototype-5-stage.md`
+
+- the smaller version to build first
+- keeps the essential cycle but removes extra machinery
+
+`build-plan.md`
+
+- implementation order
+- risk control
+- what can be omitted without breaking the experiment
 
 ## Strategic Rule
 
-Sage should be built as the smallest real neurosymbolic prototype that can still leave meaningful traces.
+Sage should be the smallest architecture in the set that still has explicit inner objects and explicit revision.
 
-We do not need full grand theory implementation for the first experiment.
-We need explicit state, explicit revision, and inspectable outputs.
+If it becomes too large, it will not be finished.
+If it becomes too thin, it will stop being a real contrast condition.

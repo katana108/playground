@@ -1,164 +1,157 @@
 # Playground For Agent Architectures
 
-This repository is a working playground for comparing conversational agents with different architectures.
+This repository is a comparative workspace for four conversational agents with different internal structures.
 
-The current project focus is a comparative experiment about protoconsciousness-relevant signs in conversational agents, especially:
+The research question is narrow on purpose:
 
-- second-order self-modeling
-- self-narrative development
-- memory revision
-- offline reflection or "dreaming"
-- mirror-test-like probes
-- simple theory-of-mind-like behavior in multi-agent interaction
+- when four agents receive the same corpus and similar classes of reflective probes over repeated sessions,
+- which architectures show the strongest signs of second-order self-modeling, self-narrative development, memory revision, offline synthesis, and theory-of-mind-like behavior?
 
-This is not yet a finished product repo. It is a research workspace: part implementation source, part architecture notebook, part experiment design.
+This repo is meant to be edited as the experiment evolves. It is not only a code repository. It is also the lab notebook, protocol draft, architecture map, and evidence-planning folder.
 
-## What Lives Here
+## Repository Map
+
+Top-level folders:
 
 - `agents/`
-  Separate folders for each agent condition.
+  One folder per agent condition.
 - `planning/`
-  Study protocol, hypotheses, week-long test structure, and implementation planning.
+  Study protocol, hypotheses, and implementation sequencing.
 - `docs/`
-  Cross-agent comparison documents and submission-facing summaries.
+  Comparison tables and summary documents.
 - `examples/`
-  Probe ideas, scene directions, and possible experiment structures.
+  Probe examples, roundtable prompts, and scene directions.
 - `tests/`
-  Notes on how the experimental runs should be exercised and compared.
+  Evaluation rubric, logging expectations, and run conventions.
 
 ## The Four Agent Conditions
 
 ### `Sofico`
 
-Educational tutor architecture.
+Educational tutor with explicit learner modeling, reflection, and a documented but not yet fully runtime-wired self/dreaming layer.
 
-Core identity:
+Important characteristics:
 
-- tracks the student over time
-- asks calibration questions about what the learner understands
-- forms unusual conceptual links
-- is meant to ingest research materials and synthesize them
-- is the strongest candidate for dreaming / offline synthesis in the current lineup
+- long-term user modeling
+- explicit teacher bootstrap
+- explicit learner notebook
+- reflection engine already exists in the real Sofico codebase
+- self-model and dreaming documents already exist in the real Sofico codebase
+- strongest candidate for research-driven synthesis across sessions
 
-In this repo, Sofico documents should separate:
-
-- what already exists in the current Sofico codebase
-- what should be adapted into this playground
-- what future architecture is desired but not yet built
+This repo now contains copied and adapted material from the real Sofico project so the notes can be edited here directly.
 
 ### `Sage`
 
-Minimal neurosymbolic architecture.
+Minimal neurosymbolic agent.
 
-Core identity:
+Important characteristics:
 
-- explicit self-model
-- explicit user-model
-- explicit world-model
-- explicit modulators when feasible
-- explicit self-model revision over time
+- explicit `self_model`
+- explicit `user_model`
+- explicit `world_model`
+- explicit `modulators`
+- explicit `revision_log`
+- designed to make its internal state legible
 
-Sage is intentionally split into:
+Sage is split into:
 
-- a full future architecture based on the 10-stage motivational design
-- a smaller 5-stage prototype that can realistically be built first
+- a full 10-stage target architecture
+- a smaller 5-stage prototype that should be buildable first
 
 ### `Socrates`
 
 Reflective prompt-centered agent.
 
-Core identity:
+Important characteristics:
 
-- still an agent, not just a paragraph prompt
-- strong philosophical voice and self-reflective language
-- no explicit symbolic self-model object like Sage
-- useful as a contrast condition: can style alone create the appearance of deep introspection?
+- still treated as an agent, not just a single prompt string
+- rich philosophical voice
+- good at posing questions and noticing contradictions
+- no strong symbolic self-model by default
+- good contrast condition for testing whether style can mimic depth
 
 ### `Smith`
 
-Baseline conversational condition.
+Baseline chatbot.
 
-Core identity:
+Important characteristics:
 
-- plain chatbot
 - same materials as the other agents
 - minimal personality
-- no explicit developmental machinery beyond prompt and ordinary conversation history
+- no explicit self-model
+- no explicit offline synthesis
+- useful as the floor condition
 
-Smith matters because otherwise every improvement can hide inside style and theater.
+## Working Scientific Aim
 
-## Scientific Aim
+The study does not try to prove consciousness.
 
-The aim is not to claim consciousness.
+It compares four architectures to see which ones produce more interesting and more inspectable developmental traces related to protoconsciousness research.
 
-The aim is to compare four architectures and see which ones produce richer and more inspectable developmental traces relevant to future research on protoconsciousness.
+Main focus areas:
 
-Working focus:
+- second-order self-modeling
+- self-narrative change
+- revision rather than accumulation
+- offline reflection or dreaming
+- mirror-test-like recognition of prior traces
+- simple theory-of-mind-like judgments in multi-agent interaction
 
-- does explicit self-model revision matter?
-- does offline reflection or dreaming matter?
-- do prompt-centered agents sound deeper than they structurally are?
-- what changes over repeated sessions rather than one-shot prompts?
+## Experimental Shape
 
-## Planned Experimental Shape
+Working shape:
 
-Phase 1:
+1. Run repeated one-to-one sessions with each agent over about one week.
+2. Give all four agents access to the same corpus.
+3. Use similar classes of probes rather than forcing identical wording.
+4. Save state snapshots, reflection outputs, and revision traces.
+5. End with a final roundtable among the agents.
 
-- each agent interacts over repeated sessions across about one week
-- all agents get access to the same consciousness-related materials
-- similar classes of probes are used across agents
-- findings are collected from longitudinal traces, not single responses
+The roundtable is the capstone scene, not the main evidence.
+The main evidence should come from the accumulated traces.
 
-Phase 2:
+## What To Read First
 
-- final multi-agent conversation
-- agents model one another
-- agents discuss what they are, how they changed, and what they think the others are missing
+If you are new to the repo, read these in order:
 
-The party at the end is the capstone, not the main evidence.
+1. `planning/study-design.md`
+2. `planning/hypotheses.md`
+3. `docs/agent-comparison.md`
+4. `agents/sofico/README.md`
+5. `agents/sage/README.md`
+6. `examples/probe-directions.md`
+7. `examples/agent-party.md`
 
-## How To Navigate This Repo
+## Source-Of-Truth Rule
 
-If you want:
+For Sofico in particular, this repo should not invent capabilities that do not exist.
 
-- the big-picture map, start here in `README.md`
-- the experiment design, go to [planning/study-design.md](/Users/amikeda/playground/planning/study-design.md:1)
-- the core hypotheses, go to [planning/hypotheses.md](/Users/amikeda/playground/planning/hypotheses.md:1)
-- the agent comparison matrix, go to [docs/agent-comparison.md](/Users/amikeda/playground/docs/agent-comparison.md:1)
-- possible probe scenes, go to [examples/probe-directions.md](/Users/amikeda/playground/examples/probe-directions.md:1)
-- the final roundtable ideas, go to [examples/agent-party.md](/Users/amikeda/playground/examples/agent-party.md:1)
+The playground copies and adapts material from the real Sofico project, especially:
 
-For each agent:
+- bootstrap identity
+- learner model
+- reflection engine
+- self-model document
+- dreaming document
+- current planning notes
 
-- Sofico overview: [agents/sofico/README.md](/Users/amikeda/playground/agents/sofico/README.md:1)
-- Sage overview: [agents/sage/README.md](/Users/amikeda/playground/agents/sage/README.md:1)
-- Socrates overview: [agents/philosopher/README.md](/Users/amikeda/playground/agents/philosopher/README.md:1)
-- Smith overview: [agents/baseline/README.md](/Users/amikeda/playground/agents/baseline/README.md:1)
+If a feature is only documented and not yet wired into runtime, say so explicitly.
 
-## Strategy Notes
+## Current State
 
-This playground should stay strategically narrow.
+What is already here:
 
-Bad strategy:
+- the 4-agent research framing
+- detailed Markdown notes for all four agents
+- copied/adapted Sofico source material
+- Sage target and prototype structure
+- probe and roundtable plans
+- first-pass study protocol and evaluation rubric
 
-- trying to build a grand theory of machine consciousness in one month
-- mixing too many uncontrolled differences between agents
-- relying on vibes instead of saved traces
+What still needs real implementation:
 
-Good strategy:
-
-- keep the compared conditions legible
-- keep the evidence inspectable
-- separate what is built now from what is aspirational
-- collect traces that can be shown on screen later
-
-## Status
-
-Current status:
-
-- documentation scaffold created
-- Sofico notes linked to actual source documents in `/Users/amikeda/Smithy/sofi/`
-- Sage planning seeded from the motivational paper and reduced prototype plan
-- Socrates and Smith defined as contrast conditions
-
-Implementation still to come.
+- Sage state and loop
+- actual logging format
+- consistent run harness across agents
+- saved traces from real sessions

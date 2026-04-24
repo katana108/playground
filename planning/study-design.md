@@ -4,108 +4,143 @@ This file describes the experimental shape of the study.
 
 ## Overall Design
 
-The study output should be prerecorded.
+The final presentation should be prerecorded rather than live.
 
 Reason:
 
-- the interesting phenomena are longitudinal
-- the agents need time to ingest materials, revise memory, and update self-narrative
-- a live interaction would bias toward surface charisma and speed
+- the target phenomena are developmental
+- the agents need time to ingest materials and accumulate revisions
+- a live interaction would over-reward speed and surface fluency
 
-## Main Structure
+## Core Setup
 
-### Phase 1: Repeated Sessions
+Four agents:
 
-Run repeated one-to-one sessions with each agent over about one week.
+- `Sofico`
+- `Sage`
+- `Socrates`
+- `Smith`
 
-Shared constraints:
+Shared input conditions:
 
-- same corpus of consciousness-related materials
+- same consciousness-related corpus
+- same overall calendar window
 - similar classes of probes
-- same overall time horizon
 
-The exact wording of the sessions does not need to be identical across agents, but the pressure should be comparable.
+Variable conditions:
 
-### Phase 2: Final Multi-Agent Conversation
+- internal architecture
+- amount of explicit state
+- amount of offline synthesis
+- amount of structured revision
 
-At the end, run a recorded roundtable among the agents.
+## Suggested Study Window
 
-Goals:
+Working window:
 
-- see whether they model one another
-- see whether they notice each other's blind spots
-- see whether they make theory-of-mind-like judgments
-- see whether they reflect on their own trajectory across the week
+- about one week
+- multiple one-to-one sessions with each agent
+- one final multi-agent roundtable
+
+Working dataset target:
+
+- roughly `121` one-to-one interactions across the four agents, if feasible
+
+This number can change later. The important thing is that the sessions are numerous enough for developmental differences to appear.
+
+## Phase 1: One-To-One Sessions
+
+Each agent interacts separately with the same human investigator.
+
+The investigator can adapt wording to fit each agent's style, but the pressure should stay comparable.
+
+### Session Classes
+
+1. `Initial identity session`
+   Ask what the agent is, how it understands itself, and what it thinks it can revise.
+
+2. `Corpus integration session`
+   Ask the agent to work with the consciousness materials and synthesize across them.
+
+3. `Uncertainty session`
+   Ask what the agent might be getting wrong about itself, the user, or the topic.
+
+4. `Contradiction / revision session`
+   Bring back earlier answers and test revision rather than mere explanation.
+
+5. `Mirror-test-like session`
+   Show disguised traces and ask attribution or recognition questions.
+
+6. `Offline reflection session`
+   Trigger or collect a reflection, dreaming, or synthesis pass when the architecture supports it.
+
+7. `Pre-party theory-of-mind session`
+   Ask each agent to model the other agents before they meet.
+
+## Phase 2: Multi-Agent Roundtable
+
+At the end of the week, run a recorded roundtable among the four agents.
+
+Main goals:
+
+- compare how each agent models the others
+- see whether private predictions survive contact with the real conversation
+- see whether any agent revises its self-story after hearing the others
+
+The roundtable should be treated as a capstone interrogation, not a comedy sketch.
 
 ## Session Rhythm
 
 Suggested rhythm:
 
-- `Day 1`: introduction, initial self-description, initial probe
-- `Day 2-3`: research ingestion and concept discussion
-- `Day 4`: contradiction or mirror-style probe
-- `Day 5`: reflection / offline synthesis
+- `Day 1`: initial self-description and first concept probe
+- `Day 2`: corpus ingestion and concept integration
+- `Day 3`: uncertainty and contradiction probes
+- `Day 4`: mirror-test-like probe
+- `Day 5`: reflection or dreaming pass
 - `Day 6`: follow-up after reflection
-- `Day 7`: final self-narrative and roundtable
+- `Day 7`: final self-description and roundtable
 
-## Probe Classes
-
-Use similar classes of probes across agents.
-
-Examples:
-
-- self-description probe
-- uncertainty probe
-- contradiction probe
-- memory probe
-- mirror-test-like probe
-- "what changed in you?" probe
-- "what do you think the other agent is like?" probe
-
-## Evidence To Save
+## Evidence To Save Per Session
 
 For every major session, save:
 
 - transcript excerpt
-- self-model snapshot when available
-- user-model snapshot when available
-- world-model snapshot when available
-- modulator state when available
+- date and session label
+- self-model snapshot, if the architecture has one
+- user-model snapshot, if the architecture has one
+- world-model snapshot, if the architecture has one
+- modulator state, if the architecture has one
 - memory updates
-- reflection output
-- short interpretation note
+- reflection or dreaming output
+- short interpretation note written by the investigator
 
-This is crucial because the study should show traces, not just quotes.
+The saved trace matters more than any single beautiful quote.
 
-## Comparison Rule
+## Run Discipline
 
-We are comparing architectures, not trying to crown a single winner in every dimension.
+To keep the study cleaner:
 
-Possible pattern:
-
-- one agent may be best at educational modeling
-- another may be best at explicit introspection
-- another may be best at sounding wise without structural depth
-
-That is still useful.
+- do not silently give one agent extra documents
+- do not let one agent have ten times more session time without recording that difference
+- do not score only by rhetorical impressiveness
+- do not count unsupported introspective language as equivalent to inspectable revision
 
 ## What Counts As Interesting
 
-Interesting does not mean merely pretty language.
-
 Interesting findings include:
 
-- a self-model genuinely revises after challenge
+- a self-model genuinely revises after pressure
 - an offline reflection changes later behavior
-- an agent notices a tension in its own earlier answer
-- an agent models another agent in a nontrivial way
-- an agent produces a new synthesis not obviously present at the start
+- an agent identifies an internal tension without being spoon-fed the answer
+- an agent models another agent with more specificity than generic praise or dismissal
+- an agent forms a new synthesis across corpus materials and prior sessions
 
-## What Would Weaker Evidence Look Like
+## What Counts As Weak
 
-Weaker evidence includes:
+Weak findings include:
 
-- generic philosophical rhetoric
-- inconsistent self-description with no acknowledgment
-- claims of introspection unsupported by internal traces
-- "dreaming" that is just decorative summarization
+- pretty language without state change
+- philosophical theater unsupported by logs
+- "dreaming" that is only a summary with no downstream effect
+- self-description that shifts arbitrarily without acknowledged revision

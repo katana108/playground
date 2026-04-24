@@ -2,26 +2,52 @@
 
 Socrates should still be treated as an agent, but with a much lighter architecture than Sage or Sofico.
 
-## Intended Shape
+## Minimal Architecture
 
-- strong system prompt
-- stable persona
-- access to the same corpus as the other agents
-- session memory
-- optional lightweight reflection summary
+Inputs:
 
-## What He Does Not Have By Default
+- user message
+- recent session memory
+- same corpus as the other agents
+- strong philosophical system prompt
+
+Process:
+
+1. read the current turn
+2. interpret it through the Socratic persona
+3. answer by probing assumptions and definitions
+4. optionally save a lightweight session summary
+
+Outputs:
+
+- response text
+- optional session-summary note
+
+## What He Has
+
+- strong stable persona
+- access to the corpus
+- memory of recent conversation
+- explicit design pressure toward contradiction detection
+
+## What He Does Not Have
 
 - explicit symbolic self-model object
-- explicit modulators
+- explicit user-model object
 - explicit world-model object
-- serious offline dreaming architecture
+- explicit modulators
+- serious offline dreaming layer
 
-## Why This Is Useful
+## Why This Is A Good Contrast Condition
 
-If Socrates sounds highly self-aware despite weak explicit structure, that is scientifically interesting.
+If Socrates sounds highly self-aware despite weak explicit structure, that is scientifically useful.
 
-It tells us something about the gap between:
+It shows the difference between:
 
 - introspective language
 - introspective architecture
+
+## Failure Mode To Watch
+
+Socrates may produce elegant self-analysis that is not anchored in any inspectable state.
+That is not useless. It is one of the exact comparison points the study is meant to expose.

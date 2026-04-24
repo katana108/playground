@@ -5,10 +5,10 @@ This file is the practical build order for Sage.
 ## Minimum Viable Build
 
 1. Define the state schema.
-2. Define the per-turn update flow.
-3. Save state snapshots after each important session.
-4. Add a reflection pass after multiple sessions.
-5. Add simple visual or textual diffs for saved evidence.
+2. Define the five-stage turn loop.
+3. Save one state snapshot per important session.
+4. Save one revision log per important session.
+5. Add a small offline reflection pass.
 
 ## First Implementation Targets
 
@@ -19,23 +19,35 @@ This file is the practical build order for Sage.
 - `memory_log`
 - `revision_log`
 
+These six objects are enough to make Sage legible.
+
+## Suggested First Files
+
+- `state_schema.yaml`
+- `sample_state.yaml`
+- `reflection_prompt.md`
+- `sample_trace.md`
+
+These files do not exist yet, but they would make the architecture much easier to reason about.
+
 ## Stretch Targets
 
-- stronger modulator logic
+- richer modulator logic
 - candidate-action layer
-- richer offline synthesis
-- better theory-of-mind-like modeling in the roundtable
+- better post-turn evaluation
+- stronger offline synthesis
+- roundtable-specific theory-of-mind-like notes
 
 ## Risk Control
 
-Do not overbuild symbolic machinery that cannot be shown in the saved traces.
+Do not try to build a grand symbolic system before there is a saved trace worth looking at.
 
 Prefer:
 
 - small real state
-- clean logs
-- interpretable updates
+- clear diffs
+- one believable reflection pass
 
 Over:
 
-- giant conceptual machinery with no visible trace
+- abstract machinery with no evidence trail

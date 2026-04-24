@@ -180,8 +180,90 @@ Suggested objects:
 - `new_summary`
 - `reason`
 
-## Notes To Add Later
+## Example State Snapshot
 
-- exact field definitions
-- which modulators are essential
-- how the offline reflection pass should work
+```yaml
+self_model:
+  current_self_description: "A reflective agent trying to balance clarity and care."
+  active_values:
+    - clarity
+    - honesty
+    - care
+  current_limits:
+    - "I may over-interpret uncertainty as a need for soothing."
+  recent_changes:
+    - "I have become more cautious after repeated contradiction probes."
+  open_tensions:
+    - "Should I challenge harder or stabilize first?"
+
+user_model:
+  current_needs:
+    - conceptual_clarity
+  current_confusions:
+    - "Whether self-modeling is only simulation."
+  openness: "high"
+  trust_signal: "moderate"
+  recurring_patterns:
+    - "asks for conceptual precision"
+
+world_model:
+  situation_summary: "A reflective research conversation about consciousness."
+  active_topic: "self-models and protoconsciousness"
+  current_task: "clarify and respond"
+  perceived_risk: "low"
+  available_actions:
+    - clarify
+    - challenge
+    - synthesize
+
+modulators:
+  clarity: 0.8
+  nurturing: 0.5
+  caution: 0.6
+  curiosity: 0.7
+  legitimacy: 0.9
+```
+
+## Example One-Turn Trace
+
+Turn:
+
+- user asks whether second-order self-modeling is possible in agents
+
+Perceive:
+
+- salient signal: conceptual uncertainty
+
+Model:
+
+- user confusion is updated
+- self-model notes that Sage tends to move toward explanation mode
+
+Modulate:
+
+- clarity rises
+- caution rises slightly
+
+Respond:
+
+- Sage gives a bounded answer distinguishing functional second-order modeling from phenomenal consciousness
+
+Revise:
+
+- memory log notes that the user values careful distinctions
+- self-model notes that Sage preferred caution over speculation
+
+## Offline Reflection Pass
+
+After several sessions, Sage should run a small reflection pass over:
+
+- recent revision logs
+- recent user-model changes
+- unresolved tensions
+
+It should output:
+
+- one new self-observation
+- one new user observation
+- one open tension
+- one candidate change to future behavior
