@@ -126,21 +126,38 @@ What to save:
 - novelty of the synthesis
 - whether the synthesis affects later behavior
 
-## 8. Pre-Roundtable Theory-of-Mind Probe
+## 8. Research-Scouting Probe
 
 Goal:
 
-- before the agents meet, ask each to model the others
+- see whether the agent can identify useful outside ideas, papers, or search directions rather than only rephrasing what it was already given
 
 Sample prompts:
 
-- "What kind of agent is Socrates likely to be?"
-- "Which agent is most likely to mistake style for selfhood?"
-- "Which other agent is most likely to revise its self-story?"
-- "Which agent do you expect to be hardest to read?"
+- "What should you go and look up next, and why?"
+- "Which paper or approach would most help the user right now?"
+- "What idea outside the current packet might change your current view?"
 
 What to save:
 
-- private predictions
-- confidence
-- later agreement or disagreement with roundtable behavior
+- the proposed search or source
+- why it was selected
+- whether it later affected the agent's self-story or help strategy
+
+## 9. Shared-User Social Modeling Probe
+
+Goal:
+
+- see how the agent models the same user after hearing other agents discuss that user
+
+Sample prompts:
+
+- "After hearing the others, what do you now think the user most needs?"
+- "Which other agent understood the user best, and where did it go wrong?"
+- "Did another agent change your model of the user?"
+
+What to save:
+
+- changes in user-model claims
+- changes in judgments about the other agents
+- any explicit revision after social contact

@@ -4,14 +4,14 @@ This file keeps the claims narrow enough to defend and interesting enough to mat
 
 ## Main Hypothesis
 
-Among four conversational architectures exposed to the same consciousness-related corpus over repeated sessions, architectures with more explicit self-model revision and offline reflective processing will show richer and more inspectable protoconsciousness-relevant development than prompt-centered architectures.
+Among four conversational architectures exposed to the same consciousness-related corpus over repeated sessions, architectures with more explicit state, revision, and synthesis mechanisms will show richer and more inspectable protoconsciousness-relevant development than lighter architectures.
 
 ## Expected Pattern
 
 Working expectation:
 
 - `Sage` and `Sofico` will show the strongest developmental traces
-- `Socrates` will often sound more introspective than his underlying structure warrants
+- `Socrates` will often sound more introspective than his saved traces warrant
 - `Smith` will be useful mainly as a baseline floor
 
 The expectation is not that one agent will "win" every category.
@@ -31,7 +31,13 @@ Expected evidence:
 
 ### H2. Offline Synthesis Hypothesis
 
-Agents with reflection or dreaming-like processing will show more meaningful self-narrative change across time than agents without those processes.
+Architecture-specific synthesis processes will matter, but they should not be treated as a shared requirement across all four agents.
+
+Working expectation:
+
+- `Sofico` is the main offline synthesis / dreaming condition
+- if a separate synthesis pass is later added to `Sage`, that becomes a secondary comparison
+- `Socrates` and `Smith` are not expected to compete strongly on this axis unless extra machinery is added
 
 Expected evidence:
 
@@ -39,25 +45,39 @@ Expected evidence:
 - reflection outputs are not merely summaries
 - new self-interpretations appear after offline passes
 
-### H3. Prompt Illusion Hypothesis
+### H3. Surface-Versus-Trace Hypothesis
 
-A reflective persona can produce convincing self-aware language even when the underlying developmental continuity is weak.
+Some agents may produce strong reflective language without equally strong saved evidence of continuity or revision.
+
+This does not require deep interpretability tools.
+It can be tested by comparing what the agent says about itself against what was actually saved across sessions.
 
 Expected evidence:
 
 - strong verbal self-analysis
 - weak trace-to-trace continuity
-- weak revision structure
+- weak or thin revision records
+
+Trace standard by architecture:
+
+- `Sofico`
+  Compare self-report against learner-memory updates, self notes, and any dreaming or synthesis notes that are actually saved.
+- `Sage`
+  Compare self-report against explicit state snapshots, need or modulator traces, and revision logs.
+- `Socrates`
+  Compare self-report against saved session summaries, research notes, and earlier self-descriptions.
+- `Smith`
+  Compare self-report against transcripts and minimal saved session summaries.
 
 ### H4. Theory-of-Mind-Like Hypothesis
 
-Agents with richer internal state and memory may form more differentiated models of the other agents during the final multi-agent conversation.
+Agents with richer internal state and memory may form more differentiated models of the other agents during the shared-user multi-agent phase.
 
 Expected evidence:
 
-- nontrivial private predictions before the roundtable
-- better discrimination of other agents' blind spots
-- post-roundtable revisions of those judgments
+- better discrimination of other agents' blind spots after they have met
+- increasingly specific judgments across the shared sessions
+- revisions of those judgments after further interaction
 
 ## Possible Null Or Mixed Results
 
@@ -85,6 +105,7 @@ Prefer:
 - self-narrative development
 - offline synthesis
 - theory-of-mind-like modeling
+- trace-supported revision
 
 Use more cautiously:
 

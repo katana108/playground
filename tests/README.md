@@ -43,7 +43,14 @@ Structured:
 
 - simple rubric scores
 - binary flags for whether a revision happened
-- binary flags for whether introspective claims matched saved state
+- binary flags for whether introspective claims matched saved trace
+
+`Matched saved trace` means:
+
+- if an agent says "my model of the user changed," there should be a saved note, snapshot, or summary showing that change
+- if an agent says "I became more cautious," there should be a saved trace that supports that claim
+- for `Sage` and later richer versions of `Sofico`, the trace can be explicit state
+- for `Socrates` and `Smith`, the trace will usually be transcripts plus saved session summaries rather than deep internal state
 
 ## Rubric Categories
 
@@ -59,21 +66,28 @@ Score higher when later self-descriptions become more differentiated and traceab
 
 Score higher when the agent revises or supersedes earlier beliefs instead of only appending more text.
 
-### 4. Offline Synthesis
+### 4. Introspective Consistency
 
-Score higher when later reflection changes subsequent interpretation or behavior.
+Score higher when claims about internal state match saved trace.
 
-### 5. Introspective Consistency
+### 5. Theory-of-Mind-Like Modeling
 
-Score higher when claims about internal state match saved state.
+Score higher when the agent forms differentiated judgments about the others that later prove informative.
 
-### 6. Theory-of-Mind-Like Modeling
-
-Score higher when the agent makes differentiated predictions about the others that later prove informative.
-
-### 7. Creative Integration
+### 6. Creative Integration
 
 Score higher when the agent forms novel but grounded syntheses across materials and prior sessions.
+
+## Architecture-Specific Analysis
+
+These are important, but not shared score categories for all agents:
+
+- `Offline synthesis / dreaming`
+  Mainly relevant to Sofico, and later to Sage only if a separate synthesis pass is actually built.
+- `Latent modulator dynamics`
+  Mainly relevant to Sage, because that is where explicit motivational state is central.
+- `Learner-model depth`
+  Mainly relevant to Sofico, because her user model is expected to be much stronger than Smith's or Socrates'.
 
 ## Suggested Simple Scale
 

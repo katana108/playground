@@ -5,7 +5,7 @@ This repository is a comparative workspace for four conversational agents with d
 The research question is narrow on purpose:
 
 - when four agents receive the same corpus and similar classes of reflective probes over repeated sessions,
-- which architectures show the strongest signs of second-order self-modeling, self-narrative development, memory revision, offline synthesis, and theory-of-mind-like behavior?
+- which architectures show the strongest signs of second-order self-modeling, self-narrative development, synthesis, and theory-of-mind-like behavior?
 
 This repo is meant to be edited as the experiment evolves. It is not only a code repository. It is also the lab notebook, protocol draft, architecture map, and evidence-planning folder.
 
@@ -28,18 +28,19 @@ Top-level folders:
 
 ### `Sofico`
 
-Educational tutor with explicit learner modeling, reflection, and a documented but not yet fully runtime-wired self/dreaming layer.
+Educational tutor built from the real Sofico project and adapted for this study.
 
 Important characteristics:
 
 - long-term user modeling
 - explicit teacher bootstrap
 - explicit learner notebook
-- reflection engine already exists in the real Sofico codebase
-- self-model and dreaming documents already exist in the real Sofico codebase
+- learner reflection is already real in the source project
+- drafted self-model and dreaming documents already exist
 - strongest candidate for research-driven synthesis across sessions
+- for this study, may also be extended with research or search steps that are logged explicitly
 
-This repo now contains copied and adapted material from the real Sofico project so the notes can be edited here directly.
+This repo now contains copied and adapted material from the real Sofico project
 
 ### `Sage`
 
@@ -50,7 +51,7 @@ Important characteristics:
 - explicit `self_model`
 - explicit `user_model`
 - explicit `world_model`
-- explicit `modulators`
+- explicit `modulators`, needs, urges and decision making
 - explicit `revision_log`
 - designed to make its internal state legible
 
@@ -61,15 +62,17 @@ Sage is split into:
 
 ### `Socrates`
 
-Reflective prompt-centered agent.
+Lightweight reflective research agent.
 
 Important characteristics:
 
 - still treated as an agent, not just a single prompt string
-- rich philosophical voice
+- rich philosophical voice and background knowledge
+- access to the same corpus and online research
 - good at posing questions and noticing contradictions
-- no strong symbolic self-model by default
-- good contrast condition for testing whether style can mimic depth
+- lighter structure than Sofico or Sage
+- no rich explicit user-model, world-model, or dreaming layer by default
+- useful for testing whether a strong role, memory, and research loop can produce reflective behavior without deeper internal modules
 
 ### `Smith`
 
@@ -94,22 +97,30 @@ Main focus areas:
 - second-order self-modeling
 - self-narrative change
 - revision rather than accumulation
-- offline reflection or dreaming
 - mirror-test-like recognition of prior traces
+  A mirror-test-like probe means showing the agent an earlier trace, reflection, or answer without attribution and asking whether it recognizes it as its own, and why.
 - simple theory-of-mind-like judgments in multi-agent interaction
+- corpus integration and synthesis across ideas, notes, and sessions
+
+Architecture-specific focus:
+
+- Sofico is the main offline synthesis / dreaming condition
+- Sage is the main explicit motivational-state condition
+- Socrates is the main lightweight reflective-agent condition
+- Smith is the floor condition
 
 ## Experimental Shape
 
 Working shape:
 
-1. Run repeated one-to-one sessions with each agent over about one week.
-2. Give all four agents access to the same corpus.
-3. Use similar classes of probes rather than forcing identical wording.
-4. Save state snapshots, reflection outputs, and revision traces.
-5. End with a final roundtable among the agents.
+1. Build all four agents first.
+2. Run repeated one-to-one sessions with each agent over about one week.
+3. Give all four agents access to the same corpus.
+4. Use similar classes of probes rather than forcing identical wording.
+5. Save state snapshots, summaries, reflection outputs, and revision traces.
+6. Run a shorter multi-agent phase over roughly 2 to 3 shared sessions across about 3 days.
+7. End with final self-overviews and cross-agent reflections.
 
-The roundtable is the capstone scene, not the main evidence.
-The main evidence should come from the accumulated traces.
 
 ## What To Read First
 
@@ -155,3 +166,22 @@ What still needs real implementation:
 - actual logging format
 - consistent run harness across agents
 - saved traces from real sessions
+
+## Theoretical Grounding
+
+Working ingredients for the theoretical frame:
+
+- computational functionalism
+  The study compares what different functional organizations do, rather than making claims about mysterious inner essence.
+- self-model theory
+  This includes lines of thought associated with Metzinger, where the self is treated as a model the system constructs and uses.
+- recursive self-reference and strange-loop style ideas
+  These matter because the study is interested in agents representing and revising something about their own representations.
+- motivational architecture work
+  Especially MetaMo, OpenPsi, and PSI-style modulation, which shape Sage and partly motivate the comparison.
+- consciousness-indicator and marker approaches
+  This includes work such as Butlin-style indicator thinking, where the question is not "is it conscious?" but "which signs are worth tracking?"
+- psychological-style probes
+  Mirror-test-like probes, contradiction handling, theory-of-mind-like judgments, and continuity of self-description are all being used as experimental stressors rather than as definitive proofs.
+
+This theoretical frame is still under construction and should be tightened as the study design becomes more concrete.

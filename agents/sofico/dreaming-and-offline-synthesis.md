@@ -1,10 +1,9 @@
 # Sofico Dreaming And Offline Synthesis
 
-This file organizes the real dreaming document from Sofico and turns it into an experiment-facing implementation note.
 
 ## 1. What `DREAMING.md` Already Contains
 
-The real `DREAMING.md` defines dreaming as Sofico's human-readable offline synthesis layer.
+ `DREAMING.md` defines dreaming as Sofico's human-readable offline synthesis layer.
 
 Copied major sections from the source:
 
@@ -15,21 +14,12 @@ Copied major sections from the source:
 - `Cross-Domain Fragments`
 - `Possible Revisions`
 
-Important copied design rules from the source:
 
 - dreaming is looser than `SELF_MODEL.md`
 - it should be exploratory without becoming fake mysticism
-- it should not be rewritten every turn
+- it should not be rewritten every turn, once a week or after memorable sessions
 - it should stay tied to concrete recent sessions, model changes, and artifacts
 
-## 2. What The Planning Files Say
-
-The current planning notes make two things clear:
-
-1. `DREAMING.md` exists now as a document
-2. it is not yet wired into runtime behavior
-
-The milestone planning also places richer dreaming later than the first stable tutoring slice.
 
 ## 3. What Is Already Useful Even Before Runtime Wiring
 
@@ -39,6 +29,16 @@ Even in document form, dreaming gives Sofico a place to record:
 - cross-domain synthesis
 - open questions about herself
 - candidate revisions to self-model and learner model
+- candidate papers, concepts, or search directions worth returning to
+
+For this study, the dreaming layer may also be extended with explicit research scouting:
+
+- search questions worth pursuing
+- new papers or sources worth checking
+- connections between outside material and recent sessions
+
+That should be logged as part of the dreaming or synthesis trace rather than treated as invisible background work.
+
 
 That is already valuable for the study because it lets the experiment distinguish:
 
@@ -71,6 +71,7 @@ Later, dreaming could also include:
 - clustering of recurring themes
 - ranking of which documents or questions deserve return
 - explicit proposals for self-model revision
+- explicit suggestions for what to research next
 
 ## 6. What To Watch For In The Study
 

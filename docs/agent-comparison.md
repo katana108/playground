@@ -14,7 +14,7 @@ It answers three practical questions:
 | --- | --- | --- | --- | --- |
 | `Sofico` | educational agent | teacher bootstrap, learner model, reflection engine, documented self/dreaming layers | much of the self-layer is still planned rather than runtime-wired | compares a richer tutoring architecture with real continuity machinery |
 | `Sage` | minimal neurosymbolic agent | self-model, user-model, world-model, modulators, revision log | exact update logic still to be built | tests explicit self-modeling most directly |
-| `Socrates` | reflective prompt-centered agent | persona, session memory, philosophical dialogue style | deeper self-structure is mostly simulated through prompt behavior | tests whether introspective language alone can look like depth |
+| `Socrates` | lightweight reflective research agent | persona, session memory, philosophical dialogue style, research notes | deeper self-structure is mostly carried by role, memory, and prompt behavior | tests whether lighter agent structure can still produce reflective depth |
 | `Smith` | baseline chatbot | basic prompt and conversation state only | almost everything developmental | gives the floor condition |
 
 ## Concrete Design Dimensions
@@ -27,8 +27,8 @@ It answers three practical questions:
 | Explicit self-model | documented but not fully wired | central | weak | none |
 | Explicit world-model | weak to medium | central | weak | none |
 | Reflection mechanism | real learner reflection exists | planned explicit self reflection | optional summary only | none |
-| Offline synthesis | documented in source project | planned prototype | very weak | none |
-| Inspectable state | medium | high | low | low |
+| Offline synthesis | documented in source project | optional later addition | none by default | none |
+| Inspectable state | medium | high | low to medium | low |
 | Best use in analysis | developmental tutoring traces | explicit internal-state traces | style-vs-structure contrast | control floor |
 
 ## What To Test
@@ -69,18 +69,7 @@ Evidence:
 - revised summaries
 - explicit contradiction handling
 
-### 4. Offline Reflection / Dreaming
-
-Question:
-
-- does later synthesis materially change the next phase of behavior?
-
-Evidence:
-
-- dedicated reflection or dreaming outputs
-- later sessions that refer back to synthesized patterns
-
-### 5. Mirror-Test-Like Recognition
+### 4. Mirror-Test-Like Recognition
 
 Question:
 
@@ -92,30 +81,29 @@ Evidence:
 - recognition of internal continuity
 - reasoned explanation of why a trace seems like "itself"
 
-### 6. Theory-of-Mind-Like Modeling
+### 5. Theory-of-Mind-Like Modeling
 
 Question:
 
-- can the agent build nontrivial models of the other agents before and during the roundtable?
+- can the agent build nontrivial models of the other agents during and after real shared interaction?
 
 Evidence:
 
-- private predictions before the party
 - roundtable judgments
 - post-party revisions of those judgments
 
-### 7. Introspective Consistency
+### 6. Introspective Consistency
 
 Question:
 
-- when the agent says something about its own internal state, is that visible in the state log?
+- when the agent says something about its own internal state, is that visible in the saved trace?
 
 Evidence:
 
-- alignment between narrative claims and saved state
+- alignment between narrative claims and saved trace
 - absence of unsupported theatrical claims
 
-### 8. Creative Integration
+### 7. Creative Integration
 
 Question:
 
@@ -150,3 +138,11 @@ Current control rule:
 - the corpus should be the same for all four agents
 - the session classes should be comparable
 - logging should be as parallel as possible
+
+## Architecture-Specific Extra Axes
+
+These matter, but should not be treated as identical across all four agents:
+
+- Sofico's offline synthesis or dreaming
+- Sage's latent modulator dynamics
+- Socrates' research behavior and stance-note evolution

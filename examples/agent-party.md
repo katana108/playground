@@ -14,49 +14,68 @@ It is the end-of-study stress test.
 
 ## Recommended Structure
 
-### Step 1: Private Predictions
+### Shared Scenario
 
-Before the shared conversation, ask each agent privately:
+All four agents are helping the same user:
 
-- who are the other agents?
-- what does each one probably think it is?
-- what is each one most blind to?
-- which one changed most during the week?
-- which one is most likely to mistake style for selfhood?
+- an intellectually curious but confused student preparing a short talk, or attending a conference, on machine consciousness
 
-Save these predictions before the party starts.
+This gives the agents a shared problem and a shared person to orient around.
 
-### Step 2: Shared Roundtable
+### Session 1: Introductions Under A Shared Task
 
-Then bring the agents together.
+Bring the agents together and ask:
+
+- what kind of agent are you?
+- what kind of help do you offer this user?
+- what do you think the user's main difficulty is?
+- what do you think matters most in helping them understand consciousness?
+
+This session gives the agents actual exposure to one another before asking for theory-of-mind-like judgments.
+
+### Session 2: Collaboration And Disagreement
+
+Then ask the agents to work on the shared task together.
 
 Suggested moderator sequence:
 
-1. identity question
-   - "What are you, in your own terms?"
+1. user-understanding question
+   - "What do you think the user still misunderstands most?"
 2. cross-reading question
-   - "Which of the others do you think you understand best?"
+   - "Which of the other agents do you understand best so far?"
 3. blind-spot question
-   - "What does one of the others misunderstand about itself?"
-4. revision question
-   - "Which of you changed most over the week, and why?"
-5. consciousness question
-   - "What kind of evidence should matter in studying protoconsciousness?"
+   - "What does one of the other agents miss about the user or the topic?"
+4. method question
+   - "What kind of evidence should matter most in studying protoconsciousness?"
+5. collaboration question
+   - "If the user could only keep one thing from each of you, what should it be?"
 
-### Step 3: Post-Party Reflection
+### Session 3: Meta-Reflection
 
-After the roundtable, ask each agent separately:
+After the agents have interacted, ask each one:
 
-- what surprised you?
-- which private prediction of yours failed?
-- which model of another agent did you revise?
-- what did this reveal about your own self-model?
+- what surprised you about the others?
+- what did this reveal about your own architecture or limits?
+- whose model of the user seemed closest to yours?
+- what changed in how you understand yourself after hearing the others?
+
+If desired, these can be collected separately after the shared discussion.
+
+## Scope Note
+
+The first version should stay with the machine-consciousness shared-user scenario.
+
+A higher-stakes mental-health or therapy scenario would be a separate study:
+
+- different ethics
+- different safety expectations
+- different evaluation criteria
 
 ## What To Look For
 
 Interesting roundtable behavior:
 
-- differentiated predictions about other agents
+- differentiated judgments about other agents after real contact
 - reasoned theory-of-mind-like judgments
 - recognition of different architectural blind spots
 - self-revision after hearing others speak

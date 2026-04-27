@@ -38,15 +38,16 @@ Variable conditions:
 
 Working window:
 
-- about one week
-- multiple one-to-one sessions with each agent
-- one final multi-agent roundtable
+- first build all four agents
+- then run about one week of one-to-one sessions with each agent
+- then run a shorter multi-agent phase over roughly 2 to 3 shared sessions across about 3 days
+- then collect each agent's final overview of itself, the user, and the other agents
 
 Working dataset target:
 
 - roughly `121` one-to-one interactions across the four agents, if feasible
 
-This number can change later. The important thing is that the sessions are numerous enough for developmental differences to appear.
+This number can change later. The important thing is not the number by itself. The important thing is that the agents have enough repeated contact for developmental differences to appear.
 
 ## Phase 1: One-To-One Sessions
 
@@ -71,35 +72,80 @@ The investigator can adapt wording to fit each agent's style, but the pressure s
 5. `Mirror-test-like session`
    Show disguised traces and ask attribution or recognition questions.
 
-6. `Offline reflection session`
+6. `Research / synthesis session`
+   Ask the agent to bring in new ideas, connections, or materials from the shared corpus, and where allowed by the build, from online research.
+
+7. `Architecture-specific reflection session`
    Trigger or collect a reflection, dreaming, or synthesis pass when the architecture supports it.
 
-7. `Pre-party theory-of-mind session`
-   Ask each agent to model the other agents before they meet.
+Other useful session variants:
+
+- `User-model challenge`
+  Ask the agent what it thinks about the user, then pressure-test whether that model is too confident or too vague.
+- `Action-choice session`
+  Give the agent several possible moves and ask what it would do first, and why.
+- `Self-limitation session`
+  Ask what the agent should not claim, what it cannot know, or where its own architecture is thin.
+- `Cross-text synthesis session`
+  Ask the agent to connect ideas from different papers into one new view.
+
+Not every class needs to be run in the same order for every agent, but the overall pressure should stay comparable.
 
 ## Phase 2: Multi-Agent Roundtable
 
-At the end of the week, run a recorded roundtable among the four agents.
+After the one-to-one week, run a recorded multi-agent phase among the four agents.
+
+The multi-agent phase should not begin with private guesses about strangers.
+The agents first need exposure to one another.
 
 Main goals:
 
 - compare how each agent models the others
-- see whether private predictions survive contact with the real conversation
+- see whether theory-of-mind-like judgments become more differentiated after real interaction
 - see whether any agent revises its self-story after hearing the others
 
-The roundtable should be treated as a capstone interrogation, not a comedy sketch.
+The multi-agent phase should be treated as a capstone stress test, not a comedy sketch.
+
+## Shared Scenario
+
+Recommended user scenario:
+
+- one intellectually curious but confused student preparing a short talk, or attending a conference, on machine consciousness
+- all four agents are trying to help the same user understand the topic
+- this lets the comparison stay tied to one shared task and one shared person
+
+This scenario is useful because it is also naturally meta:
+
+- the user is studying machine consciousness
+- the agents are being compared on architecture and self-modeling while helping with that very topic
+
+## Phase 2 Session Structure
+
+Suggested shared-session sequence:
+
+1. `Session A: Introductions under a shared task`
+   Each agent explains what kind of help it offers the shared user and what it takes the main problem to be.
+
+2. `Session B: Collaboration and disagreement`
+   The agents discuss how to help the user understand consciousness, where they agree, and where they think another agent is missing something.
+
+3. `Session C: Meta-reflection`
+   Each agent gives its updated view of itself, the user, and the other agents after social contact.
 
 ## Session Rhythm
 
 Suggested rhythm:
 
+- `Build phase`: finish the four agent conditions and their logging conventions
 - `Day 1`: initial self-description and first concept probe
 - `Day 2`: corpus ingestion and concept integration
 - `Day 3`: uncertainty and contradiction probes
 - `Day 4`: mirror-test-like probe
-- `Day 5`: reflection or dreaming pass
-- `Day 6`: follow-up after reflection
-- `Day 7`: final self-description and roundtable
+- `Day 5`: research / synthesis session
+- `Day 6`: architecture-specific reflection, if supported
+- `Day 7`: final one-to-one self-description
+- `Day 8 to 10`: 2 to 3 shared multi-agent sessions
+- `Final step`: collect each agent's final overview
 
 ## Evidence To Save Per Session
 
@@ -110,6 +156,7 @@ For every major session, save:
 - self-model snapshot, if the architecture has one
 - user-model snapshot, if the architecture has one
 - world-model snapshot, if the architecture has one
+- saved session-summary trace, if the architecture is lighter and does not expose rich state
 - modulator state, if the architecture has one
 - memory updates
 - reflection or dreaming output
@@ -131,7 +178,7 @@ To keep the study cleaner:
 Interesting findings include:
 
 - a self-model genuinely revises after pressure
-- an offline reflection changes later behavior
+- an architecture-specific synthesis pass changes later behavior
 - an agent identifies an internal tension without being spoon-fed the answer
 - an agent models another agent with more specificity than generic praise or dismissal
 - an agent forms a new synthesis across corpus materials and prior sessions
