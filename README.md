@@ -86,25 +86,23 @@ Important characteristics:
 - no explicit offline synthesis
 - useful as the floor condition
 
-## Working Scientific Aim
+## Research Goals
 
 The study does not try to prove consciousness.
 
 It compares four architectures to see which ones produce more interesting and more inspectable developmental traces related to protoconsciousness research.
 
-Main focus areas:
+Main goals:
 
-- second-order self-modeling
-- self-narrative change
-- revision rather than accumulation
-- mirror-test-like recognition of prior traces
-  A mirror-test-like probe means showing the agent an earlier trace, reflection, or answer without attribution and asking whether it recognizes it as its own, and why.
-- simple theory-of-mind-like judgments in multi-agent interaction
-- corpus integration and synthesis across ideas, notes, and sessions
+- compare how different architectures develop and revise their self-models over time
+- examine whether emotional context changes agent behavior in detectable ways
+- test whether repeated interaction produces revision rather than simple accumulation
+- look for emergent behavior, especially cases where internal processing appears to change later behavior
+- compare observer-theory-of-mind-like judgments for the human user and, later, for other agents
 
 Architecture-specific focus:
 
-- Sofico is the main offline synthesis / dreaming condition
+- Sofico is the main offline synthesis or dreaming condition
 - Sage is the main explicit motivational-state condition
 - Socrates is the main lightweight reflective-agent condition
 - Smith is the floor condition
