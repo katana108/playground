@@ -132,20 +132,7 @@ If you are new to the repo, read these in order:
 6. `examples/probe-directions.md`
 7. `examples/agent-party.md`
 
-## Source-Of-Truth Rule
 
-For Sofico in particular, this repo should not invent capabilities that do not exist.
-
-The playground copies and adapts material from the real Sofico project, especially:
-
-- bootstrap identity
-- learner model
-- reflection engine
-- self-model document
-- dreaming document
-- current planning notes
-
-If a feature is only documented and not yet wired into runtime, say so explicitly.
 
 ## Current State
 
