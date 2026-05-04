@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sofico Persona Flow</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+  body {
+    background: #0d1117;
+    color: #e6edf3;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 48px;
+  }
+  h1 { font-size: 1.4rem; color: #58a6ff; margin: 0; letter-spacing: 0.05em; }
+  h2 { font-size: 1rem; color: #8b949e; margin: 0 0 16px 0; font-weight: 400; }
+  .diagram-box {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 32px 40px;
+    width: 100%;
+    max-width: 860px;
+  }
+  .mermaid { display: flex; justify-content: center; }
+
+  .legend {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: #8b949e;
+  }
+  .dot {
+    width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0;
+  }
+</style>
+</head>
+<body>
+
+<h1>Sofico — Persona Architecture</h1>
+
+<div class="diagram-box">
+  <h2>Data Flow</h2>
+  <div class="mermaid">
+flowchart TD
+    TY["📄 tutor.yaml\nper-user\nname + persona"]
+    PY["📄 profile.yaml\nper-user\nlearner prefs only"]
+    DEF["⚙️ personality.py\nglobal fallback\narchetype voices"]
+
+    TY -->|"load_tutor_config()"| LFS["LocalFileService"]
+    PY -->|"load_profile()"| LFS
+
+    LFS --> CE["SoficoContextEngine\nassemble()"]
+
+    CE -->|"packet.tutor\n{name, persona}"| PKT(["SoficoContextPacket"])
+    CE -->|"packet.learner\n{verbosity, feedback...}"| PKT
+
+    PKT -->|"tutor name only"| TI["TurnInterpreter\nrouting LLM\n→ capability + intent"]
+    PKT -->|"tutor + learner"| PS["ProfileService\nbuild_personalized_system_prompt()"]
+
+    DEF -.->|fallback if no tutor.yaml| PS
+
+    PS --> PROMPT["System Prompt\n'You are Sofico...\n[cyber hacker voice]\n[Anna's preferences]'"]
+    TI --> ROUTE["Route decision\ncapability: explain\nintent: answer_from_doc"]
+
+    PROMPT --> LLM["Teacher LLM"]
+    ROUTE --> LLM
+    LLM --> RESP["💬 Response to Anna\nin Sofico's voice"]
+
+    style TY fill:#1a3a5c,color:#58a6ff,stroke:#58a6ff
+    style PY fill:#1a3a5c,color:#58a6ff,stroke:#58a6ff
+    style DEF fill:#2d2d1a,color:#d4a017,stroke:#d4a017,stroke-dasharray:5
+    style PKT fill:#1a2e1a,color:#3fb950,stroke:#3fb950
+    style PROMPT fill:#2a1a3a,color:#bc8cff,stroke:#bc8cff
+    style RESP fill:#2a1a3a,color:#bc8cff,stroke:#bc8cff
+  </div>
+</div>
+
+<div class="diagram-box">
+  <h2>Multi-tenant: what each user gets</h2>
+  <div class="mermaid">
+flowchart LR
+    subgraph NEW["New user — no tutor.yaml"]
+      direction TB
+      N1["profile.yaml\n(learner prefs)"] --> N2["personality.py\nfallback: sophia\narchetype"]
+      N2 --> N3["'You are Sofico\n(ancient wisdom voice)'"]
+    end
+
+    subgraph ANNA["Anna — has tutor.yaml"]
+      direction TB
+      A1["tutor.yaml\nname: Sofico\npersona: cyber hacker"] --> A3["'You are Sofico\n(cyber hacker voice)'"]
+      A2["profile.yaml\nlearner prefs"] --> A3
+    end
+
+    subgraph FUTURE["Future user — own tutor.yaml"]
+      direction TB
+      F1["tutor.yaml\nname: Aria\npersona: jazz musician"] --> F3["'You are Aria\n(jazz musician voice)'"]
+      F2["profile.yaml\nlearner prefs"] --> F3
+    end
+
+    style NEW fill:#161b22,stroke:#30363d,color:#8b949e
+    style ANNA fill:#161b22,stroke:#3fb950,color:#e6edf3
+    style FUTURE fill:#161b22,stroke:#58a6ff,color:#8b949e
+  </div>
+</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="dot" style="background:#58a6ff"></div>per-user files on disk</div>
+  <div class="legend-item"><div class="dot" style="background:#d4a017"></div>global fallback (no tutor.yaml)</div>
+  <div class="legend-item"><div class="dot" style="background:#3fb950"></div>context packet (assembled per turn)</div>
+  <div class="legend-item"><div class="dot" style="background:#bc8cff"></div>LLM inputs / outputs</div>
+</div>
+
+<script>mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
+</body>
+</html>

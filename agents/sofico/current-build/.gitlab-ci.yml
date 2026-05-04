@@ -1,0 +1,46 @@
+# Workflow rules:
+# - Pushes to main ALWAYS run (builds Docker image + deploys to k8s).
+#   NEVER remove this rule — it is the deployment trigger. Removing it
+#   silently breaks all deployments with no error visible to developers.
+# - Feature-branch pushes skip cloud CI (run local-ci.sh test instead).
+# - Triggers, schedules, and RUN_FULL_CI=true always run.
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_BRANCH == "main"
+    - if: $CI_PIPELINE_SOURCE == "trigger"
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+    - if: $RUN_FULL_CI == "true"
+    - when: never
+
+stages:
+  - build
+  - deploy
+
+build:docker:
+  stage: build
+  image: docker:latest
+  services:
+    - docker:dind
+  before_script:
+    - docker info
+  script:
+    - docker build --build-arg GIT_COMMIT=$CI_COMMIT_SHORT_SHA -t $CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA .
+    - docker tag $CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA $CI_REGISTRY_IMAGE:latest
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA
+    - docker push $CI_REGISTRY_IMAGE:latest
+  only:
+    - main
+
+deploy:
+  stage: deploy
+  image: curlimages/curl:latest
+  before_script: []
+  script:
+    - 'curl -sf -X POST https://webhook.glassumbrella.io/webhook/deploy
+       -H "X-Gitlab-Token: $DEPLOY_WEBHOOK_SECRET"
+       -H "Content-Type: application/json"
+       -d "{\"ref\": \"$CI_COMMIT_REF_NAME\", \"project\": \"$CI_PROJECT_PATH\", \"sha\": \"$CI_COMMIT_SHORT_SHA\"}"'
+  only:
+    - main
+  needs: ["build:docker"]

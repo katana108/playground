@@ -1,0 +1,31 @@
+# Learner Config Template
+#
+# Copy to learners/{your-name}/config.yaml and customize.
+# Sofi creates this automatically during onboarding.
+
+learner_name: "Your Name"
+
+# Level: beginner | intermediate | advanced
+# Affects how Sofi generates questions and explanations from uploaded documents.
+level: "intermediate"
+
+# Focus areas: topics you want to prioritize
+# Sofi emphasizes these when processing new documents.
+# Examples: ["language-learning", "distributed-systems", "philosophy"]
+focus_areas: []
+
+# Learning style: balanced | depth-first | breadth-first
+# - balanced:      Even mix of all four question categories
+# - depth-first:   More Explain and Connect questions
+# - breadth-first: More Recall and Apply questions
+learning_style: "balanced"
+
+# Session size: how many questions per quiz session
+preferred_session_size: 15
+
+# Interleaving: mix questions from different topics in each session (recommended)
+interleaving_enabled: true
+
+# Reminders: not yet implemented
+reminder_enabled: false
+reminder_time: "09:00"

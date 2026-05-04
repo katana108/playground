@@ -1,0 +1,70 @@
+# Topic Index Template
+#
+# One _index.yaml per topic folder. Sofi creates and updates this automatically.
+# Each question has its SM-2 scheduling data here.
+
+topic: "topic-name"
+last_updated: "YYYY-MM-DD"
+
+questions:
+  - id: "document.md#Q1"
+    text: "Question text goes here"
+    category: "Recall"
+    tags: ["definition"]
+    mastery: 0.0
+    last_reviewed: null
+    next_review: null
+    interval: 1
+    easiness: 2.5
+    reps: 0
+    created: "YYYY-MM-DD"
+
+  - id: "document.md#Q5"
+    text: "Question text goes here"
+    category: "Explain"
+    tags: ["concept"]
+    mastery: 0.0
+    last_reviewed: null
+    next_review: null
+    interval: 1
+    easiness: 2.5
+    reps: 0
+    created: "YYYY-MM-DD"
+
+  - id: "document.md#Q9"
+    text: "Question text goes here"
+    category: "Apply"
+    tags: ["procedure"]
+    mastery: 0.0
+    last_reviewed: null
+    next_review: null
+    interval: 1
+    easiness: 2.5
+    reps: 0
+    created: "YYYY-MM-DD"
+
+  - id: "document.md#Q13"
+    text: "Question text goes here"
+    category: "Connect"
+    tags: ["relationship"]
+    mastery: 0.0
+    last_reviewed: null
+    next_review: null
+    interval: 1
+    easiness: 2.5
+    reps: 0
+    created: "YYYY-MM-DD"
+
+# Field reference:
+#
+# id:            Points to the question in the study document (filename#Q-number)
+# text:          Question text — for quick lookup without opening the file
+# category:      Recall | Explain | Apply | Connect
+# tags:          Subject-specific tags (vocabulary, procedure, formula, etc.)
+# mastery:       0.0 to 1.0 — current mastery level
+# last_reviewed: YYYY-MM-DD or null
+# next_review:   YYYY-MM-DD or null — null means due immediately
+# interval:      Days between reviews (grows with each correct answer)
+# easiness:      SM-2 easiness factor — how fast the interval grows (min 1.3)
+# reps:          Consecutive correct answers — resets to 0 on any wrong answer
+# created:       Date the question was added

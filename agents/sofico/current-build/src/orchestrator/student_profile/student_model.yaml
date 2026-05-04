@@ -1,0 +1,59 @@
+identity:
+  user_id: ""
+  learner_name: ""
+  preferred_form_of_address: ""
+  relevant_background: []
+  topic_proficiency: {}
+
+goals_and_constraints:
+  study_goals: []
+  preferred_subjects: []
+  current_priorities: []
+  constraints: []
+
+stated_preferences_about_self:
+  direct_statements: []
+  learning_preferences: []
+  topic_preferences: []
+
+inferred_profile:
+  - entry_id: ""
+    summary: ""
+    evidence: []
+    confidence: 0.5
+    source: "session_reflection"
+    status: "active"
+    superseded_by: ""
+    created_at: ""
+    updated_at: ""
+    metadata: {}
+
+progress_patterns:
+  - entry_id: ""
+    summary: ""
+    evidence: []
+    confidence: 0.5
+    source: "session_reflection"
+    status: "active"
+    superseded_by: ""
+    created_at: ""
+    updated_at: ""
+    metadata: {}
+
+relationship_memory:
+  - entry_id: ""
+    summary: ""
+    evidence: []
+    confidence: 0.5
+    source: "session_reflection"
+    status: "active"
+    superseded_by: ""
+    created_at: ""
+    updated_at: ""
+    metadata: {}
+
+metadata:
+  schema_version: 1
+  created_at: ""
+  last_updated: ""
+  last_update_count: 0

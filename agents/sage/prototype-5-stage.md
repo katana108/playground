@@ -6,17 +6,6 @@ This file defines the smaller Sage prototype for the experiment.
 
 Compress the larger motivational design into something buildable and inspectable.
 
-This prototype is a compression of the 10-stage architecture, not a separate theory.
-The mapping is:
-
-- `Perceive` -> Stage 1
-- `Model and Estimate Needs` -> Stages 2 plus state updating
-- `Modulate and Appraise` -> Stages 3, 4, and 5
-- `Respond` -> Stages 6, 7, and 8
-- `Revise` -> Stages 9 and 10
-
-The center of gravity for Sage is not generic state updating by itself.
-The center of gravity is:
 
 - how user emotion and situation activate needs
 - how needs shift modulators
@@ -90,11 +79,7 @@ Questions this stage answers:
 - which goals are most active?
 - which modulators are likely too low, too high, or otherwise misaligned for this situation?
 
-Why this is Stage 2:
 
-- in the full architecture, explicit models and need estimation feed everything that comes later
-- they are queried again during modulation, appraisal, candidate generation, and scoring
-- the prototype keeps them together here because it is cheaper to build and still preserves the logic of the larger loop
 
 ### 3. `Modulate And Appraise`
 

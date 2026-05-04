@@ -1,0 +1,27 @@
+# Slack
+slack-bolt>=1.18.0
+slack-sdk>=3.21.0
+
+# Anthropic Claude
+anthropic>=0.18.0
+
+# GitLab
+python-gitlab>=4.4.0
+
+# YAML parsing
+pyyaml>=6.0
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# Async support
+aiohttp>=3.9.0
+
+# Date handling
+python-dateutil>=2.8.0
+
+# File extraction
+pypdf>=4.0.0
+python-docx>=1.1.0
+requests>=2.31.0
+beautifulsoup4>=4.12.0

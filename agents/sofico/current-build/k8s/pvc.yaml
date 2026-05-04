@@ -1,0 +1,17 @@
+---
+# Workspace Storage — persists learner data across pod restarts
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: sofi-workspace
+  namespace: ai-coworkers
+  labels:
+    app: sofi
+    component: storage
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: local-path

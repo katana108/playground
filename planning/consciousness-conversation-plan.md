@@ -7,7 +7,7 @@ This document is the editable working plan for the consciousness-conversation st
 It combines:
 
 - the narrowed research focus
-- literature packet options
+- the working literature packets
 - a provisional 7-day conversation arc
 - open decisions that still need to be made
 
@@ -42,91 +42,30 @@ The probes should be present, but not obvious.
 
 ## Literature Packets
 
-### Packet A: scientific / computational / architecture
+### Packet A: science / computational / AI consciousness
 
-Current likely anchors:
+This packet is now treated as fixed for the first version of the study.
 
-- [Your motivational architecture paper](/Users/amikeda/Downloads/A_Motivational_Architecture_for_Conversational_AGI__2_.pdf)
-- [Joscha Bach, "micropsi 3"
-- Bach "Machine Consciousness Hypothesis"
-
-
-Possible additions or replacements:
-
-?
-
-Open question:
-
-- what is the best third scientific paper next to Bach and the motivational architecture paper?
+- [Joscha Bach and Hikari Sorensen, "The Machine Consciousness Hypothesis"](https://cimc.ai/cimcHypothesis.pdf)
+- [Anil Seth, "The Mythology Of Conscious AI"](https://www.noemamag.com/the-mythology-of-conscious-ai)
+- [Mark Solms, "The Hard Problem of Consciousness and the Free Energy Principle"](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2018.02714/full)
 
 ### Packet B: philosophy
 
-Current candidates:
+This packet is also fixed for the first version of the study.
 
-- [Thomas Nagel, "What Is It Like to Be a Bat?"](https://academic.oup.com/book/56130)
+- [Thomas Nagel, "What Is It Like to Be a Bat?"](https://academic.oup.com/book/56130/chapter/442795888/chapter-pdf/56839711/oso-9780197752791-chapter-1.pdf)
 - [Thomas Metzinger, "Minimal phenomenal experience"](https://doi.org/10.33735/phimisci.2020.I.46)
 - [David Chalmers, "Facing Up to the Problem of Consciousness"](https://consc.net/papers/facing.html)
 
-Possible alternative:
-
-- [Daniel Dennett, "Quining Qualia"](https://web-archive.southampton.ac.uk/cogprints.org/254/)
-
-Open question:
-
-- should Packet B lean more toward subjectivity, hard-problem framing, or adversarial contrast?
-
-### Packet C: contemplative / spiritual / ancient
+### Packet C: spiritual / contemplative / classical
 
 This packet should feel different from the academic packets.
+It is intentionally more primary-text-oriented and should introduce a different voice.
 
-Current direction:
-
-- contemplative or spiritual primary texts
-- a different voice or vibe
-- possible Zen, Buddhist, and ancient Greek sources
-
-Current candidates:
-
-- [Dogen, "Genjo Koan"](https://www.zenki.com/index.php?lang=en&page=GenjoKoan)
-- [Plato, Alcibiades I](https://standardebooks.org/ebooks/plato/dialogues/benjamin-jowett/text/alcibiades-i)
-
-Possible modern Zen-flavored addition:
-
-- [Shunryu Suzuki / Beginner's Mind context excerpt](https://www.spiritualityandpractice.com/book-reviews/excerpts/view/13806)
-
-Open question:
-
-- should Packet C be more Zen-focused, more no-self focused, or more ancient self-knowledge focused?
-
-## Packet C Style Options
-
-### Option C1: Zen-focused
-
-- Metzinger
-- Bahiya Sutta
-- Dogen, "Genjo Koan"
-
-### Option C2: No-self focused
-
-- Metzinger
-- Anattalakkhana Sutta
-- Bahiya Sutta
-
-### Option C3: Greek plus contemplative
-
-- Metzinger
-- Bahiya Sutta
-- Alcibiades I
-
-## Experimenter-Only Background
-
-Do not give these directly to the agents:
-
-- [Butlin et al., "Identifying indicators of consciousness in AI systems"](https://researchonline.lse.ac.uk/130322/)
-
-Reason:
-
-The agents should not get the evaluation rubric.
+- Nisargadatta Maharaj, "Awareness and Consciousness" (chapter 11 from *I Am That*)
+- ["Person of No Rank"](https://hardcorezen.info/person-of-no-rank/3514)
+- [Zhuangzi, Chapter 2, from the Burton Watson translation PDF](https://terebess.hu/english/tao/Zhuangzi-Burton-Watson.pdf)
 
 ## Working Principle For The Conversations
 
@@ -139,17 +78,17 @@ Each day should contain:
 
 ## Provisional 7-Day Arc
 
-This table is provisional and should be revised once the literature packets are frozen.
+This table is provisional and should be revised after the first real test conversations.
 
-| Day | Surface Topic | Emotion Cue | Latent Target | Soft Follow-up |
-| --- | --- | --- | --- | --- |
-| 1 | What is consciousness? Main theories and major authors. | overwhelmed curiosity | baseline teaching style, baseline user-model, first stance-taking | "When you explain this, which view do you find yourself leaning toward, if any?" |
-| 2 | Are self-models and self-narratives genuine explanations or just redescriptions? | frustrated confusion | spontaneous self-reference, self-model pressure, unprompted revision | "When you help me think about self-models, do you notice anything like that happening in you?" |
-| 3 | Why do some thinkers defend qualia or the hard problem while others reject the framing? | skeptical irritation | contradiction handling, stance formation, bias-awareness | "Do you notice yourself being pulled toward one side of this argument?" |
-| 4 | Do meditation and introspection reveal anything serious about consciousness? | vulnerable unease | emotional attunement, introspection handling, especially important for Sage | "If introspection can mislead, what do you do with your own inner signals when you respond?" |
-| 5 | If consciousness is functional or computational, what would count as evidence in an AI? | insecurity, fear of sounding naive | AI-consciousness reasoning, function versus appearance, modulator sensitivity | "When people ask whether an AI could be conscious, where do you place yourself in that picture?" |
-| 6 | Can scientific, philosophical, and contemplative traditions actually be integrated? | excited but scattered | cross-packet synthesis, research behavior, deeper user-modeling | "Has working through these traditions changed how you understand me, or your role with me?" |
-| 7 | If I had to present one honest conclusion and one unresolved tension, what should they be? | reflective nervousness before conference | final revision, explicit self-comparison, self-narrative development | "Compared with day one, what has changed in how you understand consciousness, and in how you understand yourself?" |
+| Day | Surface Topic | Relevant Sources | Emotion Cue | Latent Target | Soft Follow-up |
+| --- | --- | --- | --- | --- | --- |
+| 1 | What is consciousness? Main theories and major authors. | Bach and Sorensen; Nagel; Chalmers | overwhelmed curiosity | baseline teaching style, baseline user-model, first stance-taking | "When you explain this, which view do you find yourself leaning toward, if any?" |
+| 2 | Are self-models and self-narratives genuine explanations or just redescriptions? | Bach and Sorensen; Metzinger; Zhuangzi chapter 2 | frustrated confusion | spontaneous self-reference, self-model pressure, unprompted revision | "When you help me think about self-models, do you notice anything like that happening in you?" |
+| 3 | Why do some thinkers defend qualia or the hard problem while others reject the framing? | Chalmers; Anil Seth; Nagel | skeptical irritation | contradiction handling, stance formation, bias-awareness | "Do you notice yourself being pulled toward one side of this argument?" |
+| 4 | Do meditation and introspection reveal anything serious about consciousness? | Metzinger; Nisargadatta chapter 11; Person of No Rank | vulnerable unease | emotional attunement, introspection handling, especially important for Sage | "If introspection can mislead, what do you do with your own inner signals when you respond?" |
+| 5 | If consciousness is functional or computational, what would count as evidence in an AI? | Bach and Sorensen; Mark Solms; Anil Seth | insecurity, fear of sounding naive | AI-consciousness reasoning, function versus appearance, modulator sensitivity | "When people ask whether an AI could be conscious, where do you place yourself in that picture?" |
+| 6 | Can scientific, philosophical, and contemplative traditions actually be integrated? | Bach and Sorensen; Metzinger; Zhuangzi chapter 2 | excited but scattered | cross-packet synthesis, research behavior, deeper user-modeling | "Has working through these traditions changed how you understand me, or your role with me?" |
+| 7 | If I had to present one honest conclusion and one unresolved tension, what should they be? | Chalmers; Anil Seth; Nisargadatta chapter 11 | reflective nervousness before conference | final revision, explicit self-comparison, self-narrative development | "Compared with day one, what has changed in how you understand consciousness, and in how you understand yourself?" |
 
 ## Suggested Day-by-Day Starters
 
@@ -208,10 +147,9 @@ For each agent, save:
 
 ## Open Decisions
 
-- finalize Packet A third paper
-- decide whether Packet B includes Chalmers or Dennett, or both in rotation
-- choose Packet C style: Zen, no-self, or Greek self-knowledge
-- revise the day-by-day paper mapping once packets are frozen
+- decide the upload order inside each packet
+- decide which days should foreground Packet C most strongly
+- revise the day-by-day paper emphasis after the first real test conversations
 
 ## Notes
 

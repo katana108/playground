@@ -1,0 +1,102 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sofi
+  namespace: ai-coworkers
+  labels:
+    app: sofi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sofi
+      component: ai-agent
+  template:
+    metadata:
+      labels:
+        app: sofi
+        component: ai-agent
+    spec:
+      imagePullSecrets:
+        - name: gitlab-registry
+
+      # Init Containers
+      initContainers:
+      # Copy Claude OAuth credentials from secret to writable volume
+      - name: setup-claude-config
+        image: busybox:1.36
+        command: ['sh', '-c']
+        args:
+          - |
+            if [ -f /tmp/claude-secret/credentials.json ]; then
+              cp /tmp/claude-secret/credentials.json /claude-config/.credentials.json
+              chmod 600 /claude-config/.credentials.json
+              echo "Claude OAuth credentials installed"
+            else
+              echo "No Claude OAuth credentials found (optional)"
+            fi
+        volumeMounts:
+          - name: claude-secret
+            mountPath: /tmp/claude-secret
+            readOnly: true
+          - name: claude-config
+            mountPath: /claude-config
+
+      containers:
+      - name: sofi
+        image: registry.gitlab.com/the-smithy1/agents/sofi:latest
+        envFrom:
+          - secretRef:
+              name: sofi-secrets
+        env:
+        - name: GITLAB_URL
+          value: "https://gitlab.com"
+        - name: GITLAB_LEARNERS_PROJECT
+          value: "the-smithy1/agents/sofi"
+        - name: GITLAB_LEARNERS_BRANCH
+          value: "main"
+        - name: SOFI_USE_LOCAL_FILES
+          value: "true"
+        - name: SOFICO_TURN_INTERPRETER_MODE
+          value: "active"
+        - name: SOFI_DEFAULT_SESSION_SIZE
+          value: "15"
+        - name: SOFI_INTERLEAVING_ENABLED
+          value: "true"
+        - name: CLAUDE_CONFIG_DIR
+          value: "/home/sofi/.claude-config"
+        - name: SOFI_AGENT_SDK_AUTH
+          value: "subscription"
+        resources:
+          requests:
+            cpu: 100m
+            memory: 256Mi
+          limits:
+            cpu: 500m
+            memory: 512Mi
+        volumeMounts:
+          - name: claude-config
+            mountPath: /home/sofi/.claude-config
+          - name: workspace
+            mountPath: /app/learners
+        # Socket Mode bot — no HTTP port, use process liveness check
+        livenessProbe:
+          exec:
+            command: ["python", "-c", "import os; os.kill(1, 0)"]
+          initialDelaySeconds: 30
+          periodSeconds: 30
+
+      # Volumes
+      volumes:
+        - name: claude-secret
+          secret:
+            secretName: sofi-claude-oauth
+            optional: true  # Pod starts without it; token delivered by Taryn refresh
+        - name: claude-config
+          emptyDir:
+            sizeLimit: 100Mi
+        - name: workspace
+          persistentVolumeClaim:
+            claimName: sofi-workspace
+
+      restartPolicy: Always
