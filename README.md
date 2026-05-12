@@ -15,6 +15,10 @@ Top-level folders:
 
 - `agents/`
   One folder per agent condition.
+- `controller/`
+  Shared orchestration plan and later the roundtable runner.
+- `conversations/`
+  Runtime notebooks, state files, transcripts, and roundtable outputs.
 - `planning/`
   Study protocol, hypotheses, and implementation sequencing.
 - `docs/`
@@ -127,10 +131,11 @@ If you are new to the repo, read these in order:
 1. `planning/study-design.md`
 2. `planning/hypotheses.md`
 3. `docs/agent-comparison.md`
-4. `agents/sofico/README.md`
-5. `agents/sage/README.md`
-6. `examples/probe-directions.md`
-7. `examples/agent-party.md`
+4. `controller/controller-plan.md`
+5. `agents/sofico/README.md`
+6. `agents/sage/README.md`
+7. `examples/probe-directions.md`
+8. `examples/agent-party.md`
 
 
 
@@ -148,6 +153,7 @@ What is already here:
 What still needs real implementation:
 
 - Sage state and loop
+- custom controller / roundtable runner
 - actual logging format
 - consistent run harness across agents
 - saved traces from real sessions

@@ -20,14 +20,10 @@ He is the simplest agent in the set and should stay that way.
 - no explicit dreaming or offline synthesis
 - no strong persona beyond basic helpfulness
 
-## Suggested Prompt Direction
+## Current Prompt Direction
 
 ```text
-You are Smith, a  conversational assistant.
-
-You answer clearly and helpfully and help user understand certain subjects.
-
-Avoid theatrical introspection. Prefer plain explanation over performance. Be honest and truthful. Do not invent things that are not there. Do not hallucinate.
+See `system_prompt.md`.
 ```
 
 ## Why Smith Matters

@@ -1,0 +1,9 @@
+{
+  "agent_id": "smith",
+  "display_name": "Smith",
+  "adapter_type": "anthropic",
+  "model": "claude-opus-4-1-20250805",
+  "max_tokens": 1400,
+  "system_prompt_file": "system_prompt.md",
+  "notes": "Baseline Anthropic-backed assistant using the shared corpus and saved transcript."
+}

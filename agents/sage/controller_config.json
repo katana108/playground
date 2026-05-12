@@ -1,0 +1,6 @@
+{
+  "agent_id": "sage",
+  "display_name": "Sage",
+  "adapter_type": "manual",
+  "notes": "Replace with a real Sage adapter after the modulator loop is implemented."
+}

@@ -1,1 +1,3 @@
 agents/sofico/current-build/learners/
+__pycache__/
+*.pyc

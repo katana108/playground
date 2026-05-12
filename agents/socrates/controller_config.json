@@ -1,0 +1,6 @@
+{
+  "agent_id": "socrates",
+  "display_name": "Socrates",
+  "adapter_type": "manual",
+  "notes": "Replace with a prompt-plus-notebook adapter later."
+}
